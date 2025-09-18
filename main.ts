@@ -4,8 +4,11 @@ import { exec } from 'child_process';
 const app = express();
 const port = 5000;
 
+// Simple API for turning the host PC off (Windows only)
+// Do not expose this, use only in internal networks
+
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.send('KillMe API running!');
 });
 
 app.post('/kill', (req, res) => {
