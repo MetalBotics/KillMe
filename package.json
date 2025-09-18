@@ -1,0 +1,28 @@
+{
+  "name": "killme",
+  "version": "1.0.0",
+  "description": "\u0000 \u0000K\u0000i\u0000l\u0000l\u0000M\u0000e\u0000\r\u0000 \u0000",
+  "main": "main.ts",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon main.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MetalBotics/KillMe.git"
+  },
+  "author": "MetalBotics",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MetalBotics/KillMe/issues"
+  },
+  "homepage": "https://github.com/MetalBotics/KillMe#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3"
+  }
+}
