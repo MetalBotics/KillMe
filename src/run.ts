@@ -1,4 +1,7 @@
-import { startServer } from './index.js';
+import KillMe from './index.js';
+import { KillMeConfig } from './index.js';
 
-// Production entrypoint - starts the server with default options.
-startServer();
+const opt: KillMeConfig = {port:5000, host:"0.0.0.0"}
+
+const kserver = new KillMe(opt)
+kserver.startServer()
