@@ -42,7 +42,7 @@ export default class KillMe {
         } else {
           res.status(400).json({ message: 'Invalid time parameter' });
         }
-        console.log(time);
+        console.log(`Host will be shutdown in ${time} seconds`);
       });
 
       app.get('/mercy', (req, res) => {
