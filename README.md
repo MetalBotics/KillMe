@@ -8,9 +8,7 @@
 - Since the server is running on 0.0.0.0, the server can be accessible for any computer in the network, you can use `ipconfig` to see the IP of the machine you want to shutdown and do it via another device by doing the request.
 ## npm package
 
-This repository can be published as an npm package that exposes a programmatic API.
-
-Install (when published):
+Install:
 
 ```bash
 npm install @metalbotics/killme
