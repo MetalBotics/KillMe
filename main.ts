@@ -7,6 +7,7 @@ const port = 5000;
 app.use(cors());
 app.use(express.json());
 
+// Old version, kept for reference. Current version on src/index.ts
 // Simple API for turning the host PC off (Windows only)
 // Do not expose this, use only in internal networks
 
