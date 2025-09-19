@@ -21,7 +21,7 @@ Programmatic usage:
 ```ts
 import { startServer, stopServer } from '@metalbotics/killme';
 
-const { app, server } = startServer({ port: 4000 });
+const { app, server } = startServer({ port: 4000, host:"127.0.0.1" }); // or host:"0.0.0.0" for full local visibility
 
 // later
 stopServer();
@@ -43,4 +43,5 @@ npm run dev
 ```
 
 Security warning: This package runs OS shutdown commands. Do NOT publish or use this on untrusted networks. Use only for local, internal, or testing purposes.
+
 
