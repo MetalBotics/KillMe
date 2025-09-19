@@ -1,12 +1,24 @@
 {
-  "name": "killme",
+  "name": "@metalbotics/killme",
   "version": "1.0.0",
-  "description": "\u0000 \u0000K\u0000i\u0000l\u0000l\u0000M\u0000e\u0000\r\u0000 \u0000",
-  "main": "main.ts",
+  "description": "Simple local-only API to shut down a Windows PC (use only on trusted networks)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
+  "engines": {
+    "node": ">=18"
+  },
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon main.ts"
+    "build": "tsc -p .",
+    "prepare": "npm run build",
+  "start": "node dist/run.js",
+  "dev": "nodemon --watch src --exec \"node --no-deprecation --import=\\\"data:text/javascript,import { register } from 'node:module'; import { pathToFileURL } from 'node:url'; register('ts-node/esm', pathToFileURL('./'));\\\" src/dev.ts\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -20,11 +32,17 @@
   "homepage": "https://github.com/MetalBotics/KillMe#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^5.1.0",
-    "nodemon": "^3.1.10"
+    "express": "^5.1.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.3"
-  }
+    "@types/express": "^5.0.3",
+    "typescript": "^5.5.0",
+    "ts-node-dev": "^2.0.0",
+    "@types/node": "^20.0.0",
+    "nodemon": "^3.1.10"
+  },
+  "files": [
+    "dist/"
+  ]
 }
