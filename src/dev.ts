@@ -1,6 +1,10 @@
-import { startServer } from './index.js';
+import KillMe from './index.js';
+import { KillMeConfig } from './index.js';
 
-startServer({ port: 5000 });
+const opt: KillMeConfig = {port:5000, host:"0.0.0.0"}
+
+const kserver = new KillMe(opt)
+kserver.startServer()
 
 // Keep process alive; server returned by startServer already listens and
 // prevents process exit. This file exists to be a clean entrypoint for
